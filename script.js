@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
 
-    console.log("hello world");
+//    console.log("hello world");
 
 
     const textItem = document.getElementById("text-item");
@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", () =>
         if (itemTextValue !== "")
         {
             const items = unorderedListItem.getElementsByTagName("span");
-				
-            //console.log(items);
-            //console.log("scoobysnacks");
         
             itemFound = false;
         
@@ -40,25 +37,15 @@ document.addEventListener("DOMContentLoaded", () =>
             {
 	            const newLiElement = document.createElement("li");
 	            const newSpan = document.createElement("span");
-                //-		const newTextBoxElement = document.createElement("input");
                 const newRemoveButtonElement = document.createElement("button");
 	            const newEditButtonElement = document.createElement("button");
 
-                //-    newTextBoxElement.type = "text";
-
                 newRemoveButtonElement.type = "button";
                 newEditButtonElement.type  = "button";
-                newSpan.className = "edit-btn";
-
-                //not needed    	        newLiElement.textContent = itemTextValue;
 	            newSpan.textContent = itemTextValue;	
-                //-	        newTextBoxElement.textContent = itemTextValue;
 	            newRemoveButtonElement.textContent = "Remove";
 	            newEditButtonElement.textContent = "Edit";
 
-           		//unorderedListItem.appendChild(newLiElement);
-	            //unorderedListItem.appendChild(newRemoveButtonElement);
-                //-		newLiElement.appendChild(newTextBoxElement);
                 newLiElement.appendChild(newSpan);
 	            newLiElement.appendChild(newRemoveButtonElement);
 	            newLiElement.appendChild(newEditButtonElement);
@@ -83,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () =>
                     {
                         // Enter edit mode
                         const span = listItem.querySelector('span');
-                        const inputText = document.createElement('input');
+                        const newInputText = document.createElement('input');
 
-                        inputText.type = 'text';
-                        inputText.value = span.textContent;
-                        listItem.replaceChild(inputText, span);
+                        newInputText.type = 'text';
+                        newInputText.value = span.textContent;
+                        listItem.replaceChild(newInputText, span);
                         editButton.textContent = 'Save';
                     } 
                     else if (editButton.textContent === 'Save') 
@@ -127,8 +114,6 @@ document.addEventListener("DOMContentLoaded", () =>
 			            }
                     }    
                 });
-   
-                //console.log(unorderedListItem);
             }
         }
         else
