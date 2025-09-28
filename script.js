@@ -1,10 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () =>
 {
-
-//    console.log("hello world");
-
-
     const textItem = document.getElementById("text-item");
     const buttonAddItem = document.getElementById("button-add-item");
     const unorderedListItem = document.getElementById("unordered-list-item");
